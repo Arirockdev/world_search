@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+:root {
+  --btn: #895BE6;
+  --btn-clicked: #581CB8;
+  --font-family: 'Montserrat', sans-serif;
+  --font-color: #FFFFFF;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+body {
+  font-family: var(--font-family);
+  height: 100vh;
+}
+
+.hero { 
+  background-position: center;
+  background-size: 100%;
+  background-image:
+      url('./img/globe-2.jpg'),
+      linear-gradient(
+        to bottom,
+        rgb(168, 168, 168),
+        rgb(124, 123, 123)
+      );
+  background-size: cover;
+  background-blend-mode: multiply;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1,
+h4,
+p{
+  color: var(--font-color)
+}
+h1 {
+  font-size: 56px;
+  letter-spacing: 5px;
+}
+h4 {
+  display: flex;
+  gap: 10px;
+  font-size: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
+.container-gral {
+  height: auto;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 50px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  gap: 15px;
+}
+
+.container-reverse {
+  display: flex;
+  flex-flow: row-reverse wrap-reverse;
+  justify-content: flex-end;
+}
+
+.country {
+  width: 200px;
+  height: 200px; 
+  background-size: 100%;
+  background-image:
+      url('./img/map_image.jpg'),
+      linear-gradient(
+        to bottom,
+        rgb(175, 175, 175),
+        rgb(77, 77, 77)
+      );
+  background-size: cover;
+  background-blend-mode: multiply;
+  display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 5px;
+text-align: center;
+}
+
+.name-paragraph {
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.btn{
+  display: flex;
+  justify-content: space-around;
+  width: 400px;
+  margin-bottom: 20px;
+}
+
+button {
+  background: var(--btn);
+  height: 50px;
+  border: none;
+  color: var(--font-color);
+  font-family: var(--font-family);
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+}
+
+button:hover {
+  background: var(--btn-clicked);
+}
+
+.clicked{
+  background: var(--btn-clicked);
+}
+
+.btn__div{
+  display: flex;
+  font-size: 12px;
+  gap: 5px;
+}
+
+
+
+.btn__div span{
+  font-size: 25px;
+}
+
+.input__divs{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.input {
+  width: 500px;
+  height: 50px;
+  border: none;
+  border-radius: 50px;
+  outline: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  padding: 20px;
+}
+
+.input::placeholder{
+  color: #cccc;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.fa-solid {
+font-size: 30px;
+color: var(--font-color);
+}
+
+.span-letra {
+  color: orangered;
+  font-weight: 700;
+  font-size: 25px;
+}
+
+.span-cantidad {
+  color: greenyellow;
+  font-weight: 700;
+  font-size: 25px;
+}
+
+.p-insert {
+  letter-spacing: 5px;
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+
+@media screen and (min-width: 325px) and (max-width: 576px){
+  .hero{
+    height: auto;
+  }
+  h1{
+    margin-top: 10px;
+  }
+  h4{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .p-insert {
+    display: flex;
+    text-align: center;
+  }
+  .input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .input__divs {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 35px;
+  }
+  .btn{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    gap: 10px;
+  }
+  #btn__alfabetical--order{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+  
+  .container-gral {
+    margin-bottom: 10px;
+  }
+}
+
+
+@media screen and (max-width: 800px){
+  h1{
+    font-size: calc(1vw + 2.5rem);
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 1200px){ 
+  .container-gral {
+    display: flex;
+    justify-content: center;
+  }
+  
+}
+
